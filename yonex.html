@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SporteX – every sport, every top brand</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#F3F5F8;--sf:#fff;--ink:#101828;--mu:#5B6678;--ln:#DCE1EA;--pr:#FF5A1F;--tl:#0E7C86;--yl:#FFC933;--d:Anton,Impact,"Arial Narrow",sans-serif;--b:Outfit,"Segoe UI",system-ui,Arial,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0A1120;--sf:#131C2E;--ink:#EEF2F8;--mu:#97A3B8;--ln:#26324A;--pr:#FF7A45}}
+:root[data-theme=dark]{--bg:#0A1120;--sf:#131C2E;--ink:#EEF2F8;--mu:#97A3B8;--ln:#26324A;--pr:#FF7A45}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.5 var(--b);overflow-x:hidden}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer;background:0;border:0}
+:focus-visible{outline:3px solid var(--pr);outline-offset:2px;border-radius:6px}
+.w{width:min(1240px,100% - 2rem);margin-inline:auto}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:.7rem 1.2rem;border-radius:12px;font-weight:700;background:var(--pr);color:#fff;border:2px solid var(--pr);transition:transform .15s,box-shadow .2s}
+.btn:hover{box-shadow:0 10px 22px -10px var(--pr);transform:translateY(-1px)}.btn:active{transform:scale(.98)}
+.btn.g{background:var(--sf);color:var(--ink);border-color:var(--ln)}.btn.y{background:var(--yl);border-color:var(--yl);color:#101828}.btn.sm{padding:.45rem .8rem;font-size:.9rem}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+.top .w{display:flex;align-items:center;gap:.8rem;height:64px}
+.logo{font:400 2rem/1 var(--d);letter-spacing:.03em;color:var(--ink);text-decoration:none}.logo b{color:var(--pr)}
+.sr{flex:1;max-width:460px;margin-inline:auto}.sr input{width:100%;height:42px;padding:0 1rem;border-radius:12px;border:1px solid var(--ln);background:var(--sf)}
+.ib{position:relative;height:42px;min-width:42px;padding:0 .8rem;border-radius:12px;border:1px solid var(--ln);background:var(--sf);font-weight:600}
+.ib i{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;border-radius:99px;background:var(--yl);color:#101828;font:700 .75rem/20px var(--b);text-align:center;font-style:normal}
+.bump{animation:bp .4s}@keyframes bp{40%{transform:scale(1.5)}}
+.hero{position:relative;background:#083B42;color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 80% at 80% 30%,#12818C,transparent 65%),repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.06) 119px 121px)}
+.hero .w{display:grid;grid-template-columns:1.1fr 1fr;gap:1rem;align-items:center;min-height:min(640px,86vh);padding-block:3rem 5.5rem}
+h1{font:400 clamp(3.4rem,9vw,7.6rem)/.92 var(--d);letter-spacing:.01em}
+.hero p{margin:1.2rem 0 1.8rem;max-width:36ch;color:#CDE9EC;font-size:1.15rem}
+.hero .btn.g{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.deal{display:inline-flex;gap:.6rem;align-items:center;margin-bottom:1.2rem;padding:.4rem .9rem;border-radius:99px;background:rgba(255,255,255,.12);font-weight:600;font-size:.92rem}
+.deal b{font:400 1.3rem var(--d);color:var(--yl);font-variant-numeric:tabular-nums;letter-spacing:.05em}
+.court{position:relative;height:420px}
+.ball{position:absolute;bottom:34px;left:var(--x);width:var(--s);animation:bn var(--t) infinite;animation-delay:var(--dl)}
+.ball svg{width:100%;display:block;animation:sp var(--t) linear infinite}
+.ball::after{content:"";position:absolute;left:10%;right:10%;bottom:-14px;height:10px;border-radius:50%;background:rgba(0,0,0,.35);filter:blur(3px);animation:sh var(--t) infinite;animation-delay:var(--dl)}
+@keyframes bn{0%,100%{transform:translateY(0) scale(1.12,.88);animation-timing-function:cubic-bezier(.2,.7,.4,1)}50%{transform:translateY(calc(var(--h)*-1)) scale(1);animation-timing-function:cubic-bezier(.6,0,.8,.3)}}
+@keyframes sp{to{transform:rotate(360deg)}}@keyframes sh{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(.5);opacity:.2}}
+.line{position:absolute;left:0;right:0;bottom:30px;height:3px;background:rgba(255,255,255,.7)}
+.mq{position:absolute;left:0;right:0;bottom:0;background:var(--pr);overflow:hidden;white-space:nowrap}
+.mq div{display:inline-flex;animation:mq 38s linear infinite}.mq:hover div{animation-play-state:paused}
+.mq button{padding:.65rem 1.6rem;font:400 1.2rem var(--d);letter-spacing:.06em;color:#fff}.mq button:hover{color:#101828}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(max-width:860px){.hero .w{grid-template-columns:1fr}.court{height:300px}.sr{display:none}}
+section{padding-block:3.2rem}
+h2{font:400 clamp(2.2rem,5vw,3.4rem)/1 var(--d);letter-spacing:.02em}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1.2rem 0}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding-bottom:.4rem;flex:1 1 100%}
+.chip{flex:none;padding:.45rem .95rem;border-radius:99px;border:1px solid var(--ln);background:var(--sf);font-weight:600;transition:all .2s}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+select,.rg{height:42px;padding:0 .8rem;border-radius:12px;border:1px solid var(--ln);background:var(--sf)}
+.rg{display:flex;align-items:center;gap:.6rem;font-size:.9rem}.rg input{accent-color:var(--pr)}
+#cnt{color:var(--mu);margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:1.1rem}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;animation:up .45s both;animation-delay:calc(var(--i)*25ms);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 20px 36px -22px rgba(0,0,0,.5)}
+@keyframes up{from{opacity:0;transform:translateY(16px)}}
+.art{position:relative;aspect-ratio:1;display:grid;place-items:center;background:radial-gradient(90% 80% at 30% 15%,color-mix(in srgb,var(--a) 65%,transparent),transparent 65%),linear-gradient(160deg,#16294F,#0B1530)}
+.art svg{width:70%;transition:transform .5s cubic-bezier(.2,.8,.2,1)}.card:hover .art svg{transform:scale(1.12) rotate(-6deg)}
+.art img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;left:.7rem;top:.7rem;padding:.2rem .55rem;border-radius:7px;background:var(--yl);color:#101828;font-size:.78rem}
+.cb{display:flex;flex-direction:column;gap:.25rem;padding:.9rem 1rem 1.1rem;flex:1}
+.cb small{color:var(--mu)}.cb h3{font-size:1.05rem;line-height:1.25}
+.pr{font-weight:700;font-size:1.2rem;margin-top:auto}.pr s{font-size:.9rem;color:var(--mu);margin-left:.4rem;font-weight:400}
+.st{color:var(--tl)!important;font-weight:600}.st.lo{color:var(--pr)!important}.cb .btn{margin-top:.5rem}
+.none{grid-column:1/-1;text-align:center;padding:3rem;border:2px dashed var(--ln);border-radius:18px;color:var(--mu)}
+.sell{background:var(--tl);color:#fff}.sell .w{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between}.sell p{max-width:50ch;margin-top:.6rem}
+footer{padding:2rem 0;color:var(--mu);font-size:.9rem;border-top:1px solid var(--ln)}
+dialog{border:0;padding:0;border-radius:20px;background:var(--sf);color:var(--ink);width:min(480px,calc(100% - 1.5rem));max-height:calc(100dvh - 1.5rem);overflow:auto}
+dialog::backdrop{background:rgba(5,10,28,.6);backdrop-filter:blur(4px)}dialog[open]{animation:pp .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes pp{from{opacity:0;transform:translateY(16px) scale(.97)}}
+dialog.dr{margin:0 0 0 auto;height:100dvh;max-height:none;width:min(420px,100%);border-radius:0;animation:dr .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes dr{from{transform:translateX(100%)}}
+.f{padding:1.6rem;display:grid;gap:.8rem}.f h2{font-size:2.2rem}.f label{display:grid;gap:.25rem;font-weight:600;font-size:.92rem}
+.f input,.f select{height:44px;padding:0 .8rem;border-radius:11px;border:1.5px solid var(--ln);background:var(--bg)}.f input[type=color]{width:64px;padding:3px}
+.er{color:#D92D3F;font-weight:600;min-height:1.2em;font-size:.92rem}.nt{color:var(--mu);font-size:.85rem}
+.x{position:absolute;right:.8rem;top:.8rem;width:38px;height:38px;border-radius:50%;background:var(--bg)}
+.ln{display:grid;grid-template-columns:60px 1fr auto;gap:.7rem;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--ln)}
+.ln .art{border-radius:10px}.ln .art svg{width:80%}
+.q{display:inline-flex;border:1px solid var(--ln);border-radius:9px;margin-top:.2rem}.q button{width:30px;height:30px;font-weight:700}.q span{min-width:24px;text-align:center;line-height:30px}
+.tt{display:flex;justify-content:space-between;color:var(--mu)}.tt.b{color:var(--ink);font-weight:700;font-size:1.1rem}
+.lv{position:fixed;left:1rem;bottom:calc(env(safe-area-inset-bottom,0px) + 1rem);z-index:50;display:grid;gap:.5rem;max-width:min(340px,calc(100% - 2rem));pointer-events:none}
+.ts{padding:.7rem .95rem;border-radius:12px;background:var(--ink);color:var(--bg);font-size:.92rem;font-weight:500;box-shadow:0 12px 30px -12px rgba(0,0,0,.6);animation:pp .35s both}
+.ts em{font-style:normal;color:var(--yl);font-size:.75rem;display:block}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style></head><body>
+<header class="top"><div class="w">
+<a class="logo" href="#top">Sporte<b>X</b></a>
+<div class="sr"><label class="sr-only" for="q" style="position:absolute;left:-9999px">Search</label><input id="q" type="search" placeholder="Search bats, boots, rackets, brands…" autocomplete="off"></div>
+<button class="ib" id="acct" style="margin-left:auto">Sign in</button>
+<button class="ib" id="cartB" aria-label="Open cart">Cart <i id="cc">0</i></button></div></header>
+<main id="top">
+<div class="hero"><div class="w"><div>
+<div class="deal">Running gear 15% off · ends in <b id="cd">--:--</b></div>
+<h1>Every sport. One court.</h1><p>Top brands from cricket to cycling, in one fast shop. Filter by sport, brand or item and sort any way you like.</p>
+<a class="btn y" href="#shop">Shop now</a> <button class="btn g" id="sellTop">Sell your gear</button></div>
+<div class="court" aria-hidden="true"><div class="line"></div></div></div>
+<div class="mq"><div id="mq"></div></div></div>
+<section id="shop"><div class="w"><h2>Shop all sports</h2>
+<div class="bar"><div class="chips" id="chips" role="group" aria-label="Sport"></div>
+<select id="fb" aria-label="Brand"></select><select id="ft" aria-label="Item type"></select>
+<label class="rg">Up to <b id="pv">₹40,000</b><input id="mx" type="range" min="500" max="40000" step="500" value="40000"></label>
+<select id="so" aria-label="Sort"><option value="">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="brand">Brand A–Z</option><option value="type">Item A–Z</option><option value="name">Name A–Z</option></select>
+<span id="cnt" aria-live="polite"></span></div>
+<div class="grid" id="grid"></div></div></section>
+<section class="sell"><div class="w"><div><h2>Got gear to sell?</h2><p>List it with a real photo from your phone or computer. It shows up under Pre-owned for every shopper on this browser.</p></div><button class="btn y" id="sellB">List an item</button></div></section>
+</main>
+<footer><div class="w">SporteX is a demo storefront. Brand names belong to their owners and are used for illustration only; no payment is taken. Product art is drawn in-page, and your own uploaded photos appear on your listings. The live feed is simulated.</div></footer>
+<dialog id="cart" class="dr" aria-label="Cart"></dialog><dialog id="dlg"></dialog><div class="lv" id="lv" aria-live="polite"></div>
+<script>
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+const fmt=n=>'₹'+Math.round(n).toLocaleString('en-IN'),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const I={ball:c=>`<circle cx="50" cy="50" r="34" fill="${c}"/><path d="M16 50Q50 30 84 50M16 50Q50 70 84 50M50 16Q36 50 50 84" stroke="#fff" stroke-opacity=".7" stroke-width="3" fill="none"/>`,
+bat:c=>`<g transform="rotate(35 50 50)"><rect x="39" y="4" width="22" height="64" rx="7" fill="${c}"/><rect x="47" y="66" width="6" height="28" rx="3" fill="#fff" opacity=".85"/></g>`,
+racket:c=>`<g transform="rotate(35 50 50)"><ellipse cx="50" cy="32" rx="21" ry="27" fill="none" stroke="${c}" stroke-width="5"/><path d="M50 6V58M30 32H70M37 15V49M63 15V49" stroke="#fff" stroke-opacity=".5"/><rect x="47" y="58" width="6" height="36" rx="3" fill="${c}"/></g>`,
+shoe:c=>`<path d="M6 68Q6 60 16 60H84Q96 60 96 72V76H6Z" fill="#fff"/><path d="M10 60V32Q10 24 20 24H32Q40 40 56 44Q82 48 92 60Z" fill="${c}"/><path d="M14 66H92" stroke="#FFC933" stroke-width="3"/>`,
+jersey:c=>`<path d="M32 14L12 26L20 44L30 38V86H70V38L80 44L88 26L68 14Q50 30 32 14Z" fill="${c}"/><path d="M32 14Q50 30 68 14" stroke="#fff" stroke-width="3" fill="none"/>`,
+dumbbell:c=>`<rect x="28" y="44" width="44" height="12" fill="#fff" opacity=".85"/><rect x="12" y="28" width="16" height="44" rx="4" fill="${c}"/><rect x="72" y="28" width="16" height="44" rx="4" fill="${c}"/>`,
+mat:c=>`<rect x="12" y="30" width="76" height="42" rx="8" fill="${c}"/><circle cx="76" cy="51" r="19" fill="#000" opacity=".2"/><circle cx="76" cy="51" r="8" fill="#fff" opacity=".7"/>`,
+bike:c=>`<g stroke="${c}" stroke-width="4" fill="none" stroke-linecap="round"><circle cx="24" cy="66" r="16"/><circle cx="76" cy="66" r="16"/><path d="M24 66L40 38H62L76 66M40 38L50 66H24M62 38L58 28H68"/></g>`,
+goggles:c=>`<rect x="10" y="34" width="32" height="28" rx="13" fill="${c}"/><rect x="58" y="34" width="32" height="28" rx="13" fill="${c}"/><path d="M42 48H58M4 42L10 46M96 42L90 46" stroke="#fff" stroke-width="4" stroke-linecap="round"/>`};
+const icon=p=>`<svg viewBox="0 0 100 100" aria-hidden="true">${I[p.type](p.c)}</svg>`;
+const TN={bat:'Bat',ball:'Ball',racket:'Racket',shoe:'Shoes',jersey:'Apparel',dumbbell:'Weights',mat:'Yoga mat',bike:'Bike',goggles:'Goggles'};
+const RAW=`SG Kashmir Willow Bat|Cricket|bat|SG|2499|#C98B4A
+Kookaburra Kahuna Bat|Cricket|bat|Kookaburra|18999|#B97A3E
+SS Leather Cricket Ball|Cricket|ball|SS|499|#B91C1C
+Adidas Cricket Jersey|Cricket|jersey|Adidas|2999|#2563EB
+Nike Strike Football|Football|ball|Nike|1899|#FF5A1F
+Adidas Predator Boots|Football|shoe|Adidas|7999|#3B82F6
+Puma Team Jersey|Football|jersey|Puma|2299|#0EA5E9
+Mikasa Match Football|Football|ball|Mikasa|2799|#FFC933
+Spalding TF-1 Basketball|Basketball|ball|Spalding|2399|#EA580C
+Nike Witness Basketball Shoes|Basketball|shoe|Nike|8995|#7C3AED
+Under Armour Hoops Jersey|Basketball|jersey|Under Armour|2599|#DC2626
+Wilson Evolution Basketball|Basketball|ball|Wilson|2199|#F97316
+Wilson Blade 98 Racket|Tennis|racket|Wilson|21999|#22C55E
+Head Speed Pro Racket|Tennis|racket|Head|19999|#F59E0B
+Babolat Pure Drive Racket|Tennis|racket|Babolat|22999|#2563EB
+Asics Gel Resolution Shoes|Tennis|shoe|Asics|11999|#1D4ED8
+Yonex Astrox 99 Pro|Badminton|racket|Yonex|19990|#FF3D5A
+Li-Ning Windstorm 72|Badminton|racket|Li-Ning|8990|#DC2626
+Yonex Power Cushion Shoes|Badminton|shoe|Yonex|11990|#1F5BFF
+Victor Master Ace Racket|Badminton|racket|Victor|9999|#16A34A
+Nike Pegasus Running Shoes|Running|shoe|Nike|10995|#FF5A1F
+Asics Gel-Kayano Shoes|Running|shoe|Asics|15999|#0E7C86
+Adidas Ultraboost Shoes|Running|shoe|Adidas|17999|#8B5CF6
+Brooks Ghost Running Shoes|Running|shoe|Brooks|13999|#2563EB
+Puma Run Tee|Running|jersey|Puma|1499|#F43F5E
+Decathlon Hex Dumbbell 10 kg|Gym|dumbbell|Decathlon|1999|#6B7280
+Adidas Adjustable Dumbbells|Gym|dumbbell|Adidas|7999|#0E7C86
+Nike Training Tee|Gym|jersey|Nike|1995|#6D28D9
+Reebok Flexlite Shoes|Gym|shoe|Reebok|5499|#DC2626
+Boldfit Yoga Mat|Yoga|mat|Boldfit|899|#14B8A6
+Puma Yoga Mat|Yoga|mat|Puma|1499|#F59E0B
+Decathlon Yoga Mat 8 mm|Yoga|mat|Decathlon|1299|#8B5CF6
+Trek Marlin 5 Mountain Bike|Cycling|bike|Trek|36999|#EF4444
+Hero Sprint Road Bike|Cycling|bike|Hero|15999|#3B82F6
+Btwin Rockrider ST100|Cycling|bike|Decathlon|17999|#22C55E
+Speedo Futura Goggles|Swimming|goggles|Speedo|1299|#0EA5E9
+Arena Cobra Ultra Goggles|Swimming|goggles|Arena|3499|#A855F7
+Speedo Endurance Jammer|Swimming|jersey|Speedo|2299|#1D4ED8
+Butterfly Timo Boll Racket|Table Tennis|racket|Butterfly|5999|#EF4444
+Stiga Pro Carbon Racket|Table Tennis|racket|Stiga|8999|#F59E0B
+Mikasa V200W Volleyball|Volleyball|ball|Mikasa|3999|#3B82F6
+Molten V5M5000 Volleyball|Volleyball|ball|Molten|3299|#FFC933`;
+const BASE=RAW.split('\n').map((s,i)=>{const [name,sport,type,brand,price,c]=s.split('|');return{id:'p'+i,name,sport,type,brand,price:+price,c,stock:4+(i*7)%19}});
+const KEY='sportex_v1',def=()=>({users:[],session:null,cart:{},orders:[],listings:[]});
+let S=(()=>{try{return Object.assign(def(),JSON.parse(localStorage.getItem(KEY)))}catch(e){return def()}})();
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast('Storage is full. Remove a listing photo.')}};
+const all=()=>[...S.listings,...BASE],find=id=>all().find(p=>p.id===id),me=()=>S.users.find(u=>u.email===S.session);
+const dealOn=p=>p.sport==='Running',priceOf=p=>dealOn(p)?p.price*.85:p.price;
+const ui={sport:'All',brand:'',type:'',max:40000,q:'',sort:''};let pending=null;
+function toast(m,live){const t=document.createElement('div');t.className='ts';t.innerHTML=(live?'<em>Live activity · demo feed</em>':'')+esc(m);$('#lv').append(t);setTimeout(()=>{t.style.opacity=0;t.style.transition='opacity .3s';setTimeout(()=>t.remove(),300)},live?4200:2400)}
+/* hero */
+$('.court').insertAdjacentHTML('beforeend',[['#FF5A1F',90,'4%',250,'1.7s','0s'],['#FFC933',70,'20%',300,'2.1s','.3s'],['#fff',80,'38%',220,'1.5s','.6s'],['#EF4444',56,'56%',320,'1.9s','.2s'],['#3B82F6',84,'72%',260,'2.3s','.9s'],['#22C55E',60,'88%',200,'1.4s','.5s']].map(([c,s,x,h,t,d])=>`<div class="ball" style="--s:${s}px;--x:${x};--h:${h}px;--t:${t};--dl:${d}"><svg viewBox="0 0 100 100">${I.ball(c)}</svg></div>`).join(''));
+function tick(){const n=new Date(),e=new Date(n);e.setHours(n.getHours()+1,0,0,0);const s=Math.floor((e-n)/1000);$('#cd').textContent=[Math.floor(s/60),s%60].map(v=>String(v).padStart(2,'0')).join(':')}tick();setInterval(tick,1000);
+/* filters */
+const sports=()=>['All',...new Set(all().map(p=>p.sport))],brands=()=>[...new Set(all().map(p=>p.brand))].sort(),types=()=>[...new Set(all().map(p=>p.type))].sort();
+function filters(){
+ $('#chips').innerHTML=sports().map(s=>`<button class="chip" data-s="${esc(s)}" aria-pressed="${ui.sport===s}">${esc(s)}</button>`).join('');
+ $('#fb').innerHTML='<option value="">All brands</option>'+brands().map(b=>`<option ${ui.brand===b?'selected':''}>${esc(b)}</option>`).join('');
+ $('#ft').innerHTML='<option value="">All items</option>'+types().map(t=>`<option value="${t}" ${ui.type===t?'selected':''}>${TN[t]}</option>`).join('');
+ $('#mq').innerHTML=[...brands(),...brands()].map(b=>`<button data-b="${esc(b)}">${esc(b)}</button>`).join('');
+}
+function vis(){const a=all().filter(p=>(ui.sport==='All'||p.sport===ui.sport)&&(!ui.brand||p.brand===ui.brand)&&(!ui.type||p.type===ui.type)&&priceOf(p)<=ui.max&&(!ui.q||(p.name+p.brand+p.sport+TN[p.type]).toLowerCase().includes(ui.q)));
+ const k={low:(x,y)=>priceOf(x)-priceOf(y),high:(x,y)=>priceOf(y)-priceOf(x),brand:(x,y)=>x.brand.localeCompare(y.brand),type:(x,y)=>x.type.localeCompare(y.type),name:(x,y)=>x.name.localeCompare(y.name)}[ui.sort];return k?a.sort(k):a}
+const stTxt=p=>p.stock<=8?`Only ${p.stock} left`:'In stock';
+function grid(){const a=vis();$('#cnt').textContent=a.length+' items';
+ $('#grid').innerHTML=a.length?a.map((p,i)=>`<article class="card" style="--i:${Math.min(i,14)};--a:${p.c}"><div class="art">${p.img?`<img src="${p.img}" alt="${esc(p.name)}">`:icon(p)}${p.user?'<b class="tag">Pre-owned</b>':''}</div><div class="cb"><small>${esc(p.brand)} · ${TN[p.type]}</small><h3>${esc(p.name)}</h3><div class="pr">${fmt(priceOf(p))}${dealOn(p)?`<s>${fmt(p.price)}</s>`:''}</div><small class="st ${p.stock<=8?'lo':''}" data-st="${p.id}">${stTxt(p)}</small><button class="btn sm" data-add="${p.id}">Add to cart</button></div></article>`).join(''):'<div class="none">No items match. Try a different sport, brand or price.</div>'}
+$('#chips').onclick=e=>{const b=e.target.closest('[data-s]');if(b){ui.sport=b.dataset.s;filters();grid()}};
+$('#mq').onclick=e=>{const b=e.target.closest('[data-b]');if(b){ui.brand=b.dataset.b;ui.sport='All';filters();grid();location.hash='#shop'}};
+$('#fb').onchange=e=>{ui.brand=e.target.value;grid()};$('#ft').onchange=e=>{ui.type=e.target.value;grid()};$('#so').onchange=e=>{ui.sort=e.target.value;grid()};
+$('#q').oninput=e=>{ui.q=e.target.value.trim().toLowerCase();grid()};
+$('#mx').oninput=e=>{ui.max=+e.target.value;$('#pv').textContent=fmt(ui.max);grid()};
+$('#grid').onclick=e=>{const b=e.target.closest('[data-add]');if(b)add(b.dataset.add,b.closest('.card').querySelector('.art'))};
+/* cart */
+const lines=()=>Object.entries(S.cart).map(([id,q])=>({p:find(id),q})).filter(l=>l.p),tot=()=>{const s=lines().reduce((a,l)=>a+priceOf(l.p)*l.q,0),sh=s&&s<2000?99:0;return{s,sh,t:s+sh,n:lines().reduce((a,l)=>a+l.q,0)}};
+function add(id,el){S.cart[id]=(S.cart[id]||0)+1;save();renderCart();const c=$('#cc');c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump');
+ if(el&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const r=el.getBoundingClientRect(),t=$('#cartB').getBoundingClientRect(),f=el.cloneNode(true);f.style.cssText=`position:fixed;z-index:90;pointer-events:none;border-radius:14px;left:${r.left}px;top:${r.top}px;width:${r.width}px;height:${r.height}px`;document.body.append(f);f.animate([{transform:'none',opacity:1},{transform:`translate(${t.left-r.left-r.width/2+20}px,${t.top-r.top-r.height/2+10}px) scale(.08)`,opacity:.3}],{duration:650,easing:'cubic-bezier(.5,0,.7,.4)'}).onfinish=()=>f.remove()}
+ toast(find(id).name+' added to cart')}
+function renderCart(){const ls=lines(),t=tot();$('#cc').textContent=t.n;
+ $('#cart').innerHTML=`<div class="f"><button class="x" data-c aria-label="Close">✕</button><h2>Your cart</h2>${ls.length?ls.map(l=>`<div class="ln" data-id="${l.p.id}"><div class="art" style="--a:${l.p.c}">${l.p.img?`<img src="${l.p.img}" alt="">`:icon(l.p)}</div><div><strong>${esc(l.p.name)}</strong><br><div class="q"><button data-q="-1" aria-label="Less">−</button><span>${l.q}</span><button data-q="1" aria-label="More">+</button></div></div><strong>${fmt(priceOf(l.p)*l.q)}</strong></div>`).join('')+`<div class="tt"><span>Subtotal</span><span>${fmt(t.s)}</span></div><div class="tt"><span>Delivery ${t.s>=2000?'':'(free over ₹2,000)'}</span><span>${t.sh?fmt(t.sh):'Free'}</span></div><div class="tt b"><span>Total</span><span>${fmt(t.t)}</span></div><button class="btn" id="go">Check out</button>`:'<p class="nt">Your cart is empty.</p>'}</div>`}
+$('#cart').onclick=e=>{if(e.target===$('#cart')||e.target.closest('[data-c]'))$('#cart').close();const q=e.target.closest('[data-q]');if(q){const id=q.closest('.ln').dataset.id;S.cart[id]+=+q.dataset.q;if(S.cart[id]<=0)delete S.cart[id];save();renderCart()}if(e.target.id==='go'){$('#cart').close();checkout()}};
+$('#cartB').onclick=()=>{renderCart();$('#cart').showModal()};
+/* dialogs / auth */
+const D=$('#dlg');D.onclick=e=>{if(e.target===D||e.target.closest('[data-c]'))D.close()};
+const show=h=>{D.innerHTML=`<div class="f"><button class="x" data-c aria-label="Close">✕</button>${h}</div>`;if(!D.open)D.showModal()};
+const hp=async(p,s)=>{try{return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s+p)))].map(b=>b.toString(16).padStart(2,'0')).join('')}catch(e){return btoa(s+p)}};
+function auth(mode,msg){const su=mode==='su';show(`<h2>${su?'Create account':'Sign in'}</h2>${msg?`<p class="nt">${esc(msg)}</p>`:''}${su?'<label>Full name<input id="an" autocomplete="name"></label>':''}<label>Email<input id="ae" type="email" autocomplete="email"></label><label>Password<input id="ap" type="password" autocomplete="${su?'new-password':'current-password'}"></label><p class="er" id="er" role="alert"></p><button class="btn" id="ok">${su?'Create account':'Sign in'}</button><button class="btn g" id="sw">${su?'I already have an account':'Create a new account'}</button><p class="nt">Saved in this browser only. Don't reuse an important password.</p>`);
+ $('#sw').onclick=()=>auth(su?'li':'su',msg);
+ $('#ok').onclick=async()=>{const er=$('#er'),em=$('#ae').value.trim().toLowerCase(),pw=$('#ap').value;if(!/^\S+@\S+\.\S+$/.test(em))return er.textContent='Enter a valid email.';
+  if(su){const nm=$('#an').value.trim();if(nm.length<2)return er.textContent='Enter your name.';if(pw.length<8)return er.textContent='Use at least 8 characters.';if(S.users.some(u=>u.email===em))return er.textContent='That email already has an account. Sign in instead.';const salt=Math.random().toString(36).slice(2);S.users.push({email:em,name:nm,salt,hash:await hp(pw,salt)})}
+  else{const u=S.users.find(x=>x.email===em);if(!u||u.hash!==await hp(pw,u.salt))return er.textContent='Email or password is incorrect.'}
+  S.session=em;save();D.close();head();toast('Welcome, '+me().name.split(' ')[0]);if(pending){const f=pending;pending=null;setTimeout(f,200)}}}
+const head=()=>$('#acct').textContent=me()?me().name.split(' ')[0]:'Sign in';
+$('#acct').onclick=()=>me()?account():auth('su');
+function account(){const u=me(),os=S.orders.filter(o=>o.o===u.email),ls=S.listings.filter(l=>l.owner===u.email);
+ show(`<h2>Hi, ${esc(u.name.split(' ')[0])}</h2><p class="nt">${esc(u.email)}</p><strong>Orders</strong>${os.length?os.map(o=>`<div class="ln" style="grid-template-columns:1fr auto"><span>${o.id}<br><small class="nt">${new Date(o.d).toLocaleDateString('en-IN')} · ${o.items} items · Confirmed</small></span><strong>${fmt(o.t)}</strong></div>`).join(''):'<p class="nt">No orders yet.</p>'}<strong>My listings</strong>${ls.length?ls.map(l=>`<div class="ln" style="grid-template-columns:1fr auto"><span>${esc(l.name)}<br><small class="nt">${fmt(l.price)}</small></span><button class="btn g sm" data-del="${l.id}">Remove</button></div>`).join(''):'<p class="nt">Nothing listed.</p>'}<button class="btn" id="nl">List an item</button><button class="btn g" id="lo">Sign out</button>`);
+ $('#nl').onclick=sell;$('#lo').onclick=()=>{S.session=null;save();D.close();head()};
+ $$('[data-del]',D).forEach(b=>b.onclick=()=>{S.listings=S.listings.filter(l=>l.id!==b.dataset.del);delete S.cart[b.dataset.del];save();filters();grid();account()})}
+function checkout(){if(!lines().length)return;if(!me()){pending=checkout;return auth('su','Create an account or sign in to place your order.')}
+ const t=tot();show(`<h2>Checkout</h2><label>Name<input id="cn" value="${esc(me().name)}"></label><label>Mobile<input id="cp" inputmode="numeric" maxlength="10"></label><label>Address, city, PIN<input id="ca"></label><p class="er" id="er" role="alert"></p><button class="btn" id="po">Place order · ${fmt(t.t)}</button><p class="nt">Demo checkout, cash on delivery. No payment is taken.</p>`);
+ $('#po').onclick=()=>{const er=$('#er');if($('#cn').value.trim().length<2)return er.textContent='Enter your name.';if(!/^\d{10}$/.test($('#cp').value))return er.textContent='Enter a 10-digit mobile number.';if($('#ca').value.trim().length<8)return er.textContent='Enter your full address.';
+  const o={id:'SX-'+Math.random().toString(36).slice(2,8).toUpperCase(),o:me().email,d:Date.now(),items:t.n,t:t.t};S.orders.unshift(o);S.cart={};save();renderCart();
+  show(`<h2>Order placed</h2><p>Thanks! Order <strong>${o.id}</strong> is confirmed. Delivery in 3 to 5 days.</p><button class="btn" data-c>Keep shopping</button>`)}}
+/* sell with real photo */
+const rd=f=>new Promise(r=>{const fr=new FileReader();fr.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,480/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);r(c.toDataURL('image/jpeg',.72))};im.onerror=()=>r('');im.src=fr.result};fr.onerror=()=>r('');fr.readAsDataURL(f)});
+function sell(){if(!me()){pending=sell;return auth('su','Create an account or sign in to list an item.')}
+ show(`<h2>List an item</h2><label>Item name<input id="sn" maxlength="60"></label><label>Sport<select id="ss">${sports().slice(1).map(s=>`<option>${esc(s)}</option>`).join('')}</select></label><label>Item type<select id="st">${Object.entries(TN).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></label><label>Brand<input id="sb" maxlength="30"></label><label>Price (₹)<input id="sp" inputmode="numeric"></label><label>Photo<input id="si" type="file" accept="image/*"></label><p class="er" id="er" role="alert"></p><button class="btn" id="sv">Publish listing</button>`);
+ $('#sv').onclick=async()=>{const er=$('#er'),pr=+$('#sp').value.replace(/,/g,'');if($('#sn').value.trim().length<3)return er.textContent='Give the item a name.';if(!$('#sb').value.trim())return er.textContent='Enter the brand.';if(!(pr>=50&&pr<=500000))return er.textContent='Enter a price from ₹50 to ₹5,00,000.';
+  const f=$('#si').files[0],img=f?await rd(f):'';S.listings.unshift({id:'u'+Date.now(),user:1,owner:me().email,name:$('#sn').value.trim(),sport:$('#ss').value,type:$('#st').value,brand:$('#sb').value.trim(),price:pr,c:'#FF5A1F',img,stock:1});save();D.close();ui.sport='All';ui.brand='';ui.type='';filters();grid();toast('Listed under Pre-owned');location.hash='#shop'}}
+$('#sellB').onclick=$('#sellTop').onclick=sell;
+/* live demo feed: stock drops and "just bought" notices */
+const WHO=['Aarav from Pune','Meera from Delhi','Kabir from Bengaluru','Isha from Mumbai','Rohan from Chennai','Anaya from Jaipur'];
+setInterval(()=>{if(document.hidden)return;const p=BASE[Math.floor(Math.random()*BASE.length)];if(p.stock<=1)return;p.stock--;const el=$(`[data-st="${p.id}"]`);if(el){el.textContent=stTxt(p);el.classList.toggle('lo',p.stock<=8)}toast(`${WHO[Math.floor(Math.random()*WHO.length)]} just bought ${p.name}`,1)},7000);
+filters();grid();renderCart();head();
+</script></body></html>
+
